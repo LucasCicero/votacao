@@ -1,0 +1,71 @@
+body{
+	
+	font-family: Helvetica,Arial,sans-serif;
+	background-image: url("images/neon.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	color:white;
+	overflow: hidden;
+
+}
+
+.container {
+	align-items: center;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	margin-top:50px;
+	color:white;
+}
+
+
+#buttonProx{
+	float:right;
+}
+
+#img1{
+	width:380px;
+	height:250px;
+
+}
+
+#img2{
+	width:100px;
+	height:100px;
+}
+
+
+#img3{
+	width:380px;
+	height:250px;
+}
+
+#dv1{
+	text-align:center;
+	width:380px;
+	height:250px;
+
+}
+#dv2{
+	width:100px;
+	height:100px;
+	float: left;
+	text-align:center;
+
+}
+
+#dv3{
+	float: left;
+	width:380px;
+	height:250px;
+
+
+}
+
+h1{	
+	
+	text-align: center;
+	color:shite;
+	
+}
