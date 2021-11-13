@@ -1,38 +1,38 @@
 var rodada=1;
 var contAux=1;
 var contAuxExc=0;
-var carros = [ 
+var imgAct = [ 
    {
-     nome: "AUDI",
-     img:"images/audi.jfif"
+     nome: "Emma Stone",
+     img:"images/Stone.jpg"
 },
 {
-     nome: "CADILLAC",
-     img:"images/cadillac.jfif"
+     nome: "Margot Robbie",
+     img:"images/Robbie.jpg"
 },
 {
-     nome: "FERRARI",
-     img:"images/ferrari.jfif"
+     nome: "Jennifer Lawrence",
+     img:"images/Lawrence.jpg"
 },
 {
-     nome: "JIPE",
-     img:"images/jipe.jfif"
+     nome: "Zendaya",
+     img:"images/Zendaya.jpg"
 },
 {
-     nome: "FUSCA",
-     img:"images/fusca.jpg"
+     nome: "Brie Larson",
+     img:"images/Brie.jpg"
 },
 {
-     nome: "CAMARO",
-     img:"images/camaro.jfif"
+     nome: "Gal Gadot",
+     img:"images/Gadot.png"
 },
 {
-     nome: "LIMOUSINE",
-     img:"images/limousine.jfif"
+     nome: "Scarlett Johansson",
+     img:"images/Johansson.jpg"
 },
 {
-     nome: "OPALA",
-     img:"images/opala.jpg"
+     nome: "Lupita",
+     img:"images/Lupita.jpg"
 }
 ]
 
@@ -70,28 +70,28 @@ function loadImage(){
 	if (rodada==4){
 		contAux=0; 
 		contAuxExc=0;		
-		document.getElementById("img1").src =carros[contAux].img;//  //carrega imagem do array com o indice do contAux
-		document.getElementById("labelImg1").innerHTML =carros[contAux].nome;
-		document.getElementById("img3").src =carros[contAux+1].img; //carrega imagem do array com o indice do contAux
-		document.getElementById("labelImg3").innerHTML =carros[contAux+1].nome;
+		document.getElementById("img1").src =imgAct[contAux].img;//  //carrega imagem do array com o indice do contAux
+		document.getElementById("labelImg1").innerHTML =imgAct[contAux].nome;
+		document.getElementById("img3").src =imgAct[contAux+1].img; //carrega imagem do array com o indice do contAux
+		document.getElementById("labelImg3").innerHTML =imgAct[contAux+1].nome;
 		rodada++;
 		loadImage();
 	}
 	else if (rodada==7){
 		contAux=0; 
 		contAuxExc=0;
-		document.getElementById("img1").src =carros[contAux].img;//  //carrega imagem do array com o indice do contAux
-		document.getElementById("labelImg1").innerHTML =carros[contAux].nome;
-		document.getElementById("img3").src =carros[contAux+1].img; //carrega imagem do array com o indice do contAux
-		document.getElementById("labelImg3").innerHTML =carros[contAux+1].nome;
+		document.getElementById("img1").src =imgAct[contAux].img;//  //carrega imagem do array com o indice do contAux
+		document.getElementById("labelImg1").innerHTML =imgAct[contAux].nome;
+		document.getElementById("img3").src =imgAct[contAux+1].img; //carrega imagem do array com o indice do contAux
+		document.getElementById("labelImg3").innerHTML =imgAct[contAux+1].nome;
 		rodada++;
 		loadImage();
 	}
 	else{
-		document.getElementById("img1").src =carros[contAux].img;//  //carrega imagem do array com o indice do contAux
-		document.getElementById("labelImg1").innerHTML =carros[contAux].nome;
-		document.getElementById("img3").src =carros[contAux+1].img; //carrega imagem do array com o indice do contAux
-		document.getElementById("labelImg3").innerHTML =carros[contAux+1].nome;
+		document.getElementById("img1").src =imgAct[contAux].img;//  //carrega imagem do array com o indice do contAux
+		document.getElementById("labelImg1").innerHTML =imgAct[contAux].nome;
+		document.getElementById("img3").src =imgAct[contAux+1].img; //carrega imagem do array com o indice do contAux
+		document.getElementById("labelImg3").innerHTML =imgAct[contAux+1].nome;
 	 	rodada++;
 	 	contAux++;
 	}
@@ -101,17 +101,17 @@ function loadImage(){
 function removeArray(firstImg){
 
 	if (firstImg){//exclui imagem do objeto correspondente ao primeiro radio button
-		carros.splice((contAuxExc+1), 1);
+		imgAct.splice((contAuxExc+1), 1);
 		contAuxExc++;		
 	}
 	else{//exclui imagem do objeto correspondente ao segundo radio button
-		carros.splice(contAuxExc, 1);
+		imgAct.splice(contAuxExc, 1);
 		contAuxExc++;		
 	}	
 }
 
 function gameFinal(){
-	document.getElementById("titulo").innerHTML = 'VENCEDOR';
+	document.getElementById("titulo").innerHTML = 'VENCEDORA';
 	document.getElementById("buttonProx").disabled=true;
 	document.getElementById("buttonProx").style.visibility = 'hidden';
 	document.getElementById("dv2").style.visibility = 'hidden';
@@ -119,10 +119,10 @@ function gameFinal(){
 	
 	if(document.getElementById('radioImg1').checked) {
 		document.getElementById("dv3").style.visibility = 'hidden'
-		document.getElementById("img1").src =carros[0].img;	
+		document.getElementById("img1").src =imgAct[0].img;	
 	
 	}else if(document.getElementById('radioImg3').checked) {
 		document.getElementById("dv1").style.visibility = 'hidden';
-		document.getElementById("img3").src =carros[1].img;
+		document.getElementById("img3").src =imgAct[1].img;
 	}
 }
